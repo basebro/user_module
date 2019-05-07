@@ -75,8 +75,8 @@ fos_user:
     firewall_name: main
     user_class: AppBundle\Entity\User
     from_email:
-        address: "%mailer_user%"
-        sender_name: "%mailer_user%"
+        address: christianacevedo.89@gmail.com
+        sender_name: 'christian'
     registration:
         confirmation:
             enabled:    true # change to true for required email confirmation
@@ -85,8 +85,9 @@ fos_user:
             type:               FOS\UserBundle\Form\Type\RegistrationFormType # or 'fos_user_registration' on Symfony < 2.8
             name:               fos_user_registration_form
             validation_groups:  [Registration, Default]
+
     service:
-        mailer: fos_user.mailer.twig_swift # this lines
+        mailer:                 fos_user.mailer.twig_swift # this lines
         email_canonicalizer:    fos_user.util.canonicalizer.default
         username_canonicalizer: fos_user.util.canonicalizer.default
         token_generator:        fos_user.util.token_generator.default
