@@ -85,7 +85,9 @@ fos_user:
             type:               FOS\UserBundle\Form\Type\RegistrationFormType # or 'fos_user_registration' on Symfony < 2.8
             name:               fos_user_registration_form
             validation_groups:  [Registration, Default]
-
+    resetting:
+        email:
+            template:   '@FOSUser/Resetting/email.txt.twig'
     service:
         mailer:                 fos_user.mailer.twig_swift # this lines
         email_canonicalizer:    fos_user.util.canonicalizer.default
