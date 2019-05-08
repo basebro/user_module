@@ -13,9 +13,8 @@
 /var/sessions/*
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
-!/vendor/
 /vendor/*
-!/vendor/friendsofsymfony/*
+!/vendor/friendsofsymfony/
 /web/bundles/
 /.idea/*
 .idea/workspace.xml
