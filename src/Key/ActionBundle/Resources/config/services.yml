@@ -1,0 +1,4 @@
+services:
+#    key_action.example:
+#        class: Key\ActionBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

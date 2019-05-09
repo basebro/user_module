@@ -16,5 +16,4 @@
 /vendor/*
 !/vendor/friendsofsymfony/
 /web/bundles/
-/.idea/*
-.idea/workspace.xml
+.*

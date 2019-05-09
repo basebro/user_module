@@ -1,0 +1,3 @@
+key_action_homepage:
+    path:     /action
+    defaults: { _controller: KeyActionBundle:Default:index }

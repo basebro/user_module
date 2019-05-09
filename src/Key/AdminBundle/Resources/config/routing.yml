@@ -1,0 +1,3 @@
+key_admin_homepage:
+    path:     /admin
+    defaults: { _controller: KeyAdminBundle:Default:index }
