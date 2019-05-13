@@ -1,3 +1,6 @@
 key_admin_homepage:
     path:     /admin
     defaults: { _controller: KeyAdminBundle:Default:index }
+key_admin_users:
+    path:     /users
+    defaults: { _controller: KeyAdminBundle:Default:users }
