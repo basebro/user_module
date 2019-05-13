@@ -95,6 +95,12 @@ class SecurityController extends Controller
      */
     protected function renderLogin(array $data)
     {
+        $securityContext = $this->container->get('security.authorization_checker');
+
+        if ($securityContext->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->redirectToRoute('homepage');
+        }
+
         return $this->render('@FOSUser/Security/login.html.twig', $data);
     }
 }

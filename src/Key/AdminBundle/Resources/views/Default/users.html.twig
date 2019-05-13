@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% block title %}Users - {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
 
@@ -23,7 +24,7 @@
                 <th> email_canonical</th>
                 <th>enabled</th>
                 <th>salt</th>
-                <th>password</th>
+                {#<th>password</th>#}
                 <th>last_login</th>
                 <th>confirmation_token</th>
                 <th>password_requested_at</th>
@@ -40,7 +41,7 @@
                     <td>{% if user.emailCanonical is defined %}{{ user.emailCanonical }}{% endif %}</td>
                     <td>{% if user.enabled is defined %}{{ user.enabled }}{% endif %}</td>
                     <td>{% if user.salt is defined %}{{ user.salt }}{% endif %}</td>
-                    <td>{% if user.password is defined %}{{ user.password }}{% endif %}</td>
+                    {#<td>{% if user.password is defined %}{{ user.password }}{% endif %}</td>#}
                     <td>{% if user.lastLogin is defined %}{{ user.lastLogin|date('d/m/Y H:i:s') }}{% endif %}</td>
                     <td>{% if user.confirmationToken is defined %}{{ user.confirmationToken }}{% endif %}</td>
                     <td>{% if user.passwordRequestedAt %}{{ user.passwordRequestedAt|date('d/m/Y H:i:s') }}{% endif %}</td>
@@ -55,10 +56,10 @@
                 <th>username</th>
                 <th>username_canonical</th>
                 <th>email</th>
-                <th> email_canonical</th>
+                <th>email_canonical</th>
                 <th>enabled</th>
                 <th>salt</th>
-                <th>password</th>
+                {#<th>password</th>#}
                 <th>last_login</th>
                 <th>confirmation_token</th>
                 <th>password_requested_at</th>

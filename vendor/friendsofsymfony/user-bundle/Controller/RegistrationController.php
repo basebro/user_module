@@ -56,6 +56,12 @@ class RegistrationController extends Controller
      */
     public function registerAction(Request $request)
     {
+        $securityContext = $this->container->get('security.authorization_checker');
+
+        if ($securityContext->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->redirectToRoute('homepage');
+        }
+
         $user = $this->userManager->createUser();
         $user->setEnabled(true);
 
