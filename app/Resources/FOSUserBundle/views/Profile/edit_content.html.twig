@@ -1,0 +1,39 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="wrapper">
+    <h2 class="form-signin-heading">Edit your profile</h2>
+    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit form-signin' } }) }}
+
+    <div class="form-group">
+        {{ form_widget(form.username, { 'attr': {'class': 'form-control',
+            'placeholder': 'form.username'|trans } }) }}
+    </div>
+    {% for errorItem in form.username.vars.errors %}
+        <div class="alert alert-danger" role="alert">{{ errorItem.message }}</div>
+    {% endfor %}
+
+
+    <div class="form-group">
+        {{ form_widget(form.email, { 'attr': {'class': 'form-control',
+            'placeholder': 'form.email'|trans } }) }}
+    </div>
+    {% for errorItem in form.email.vars.errors %}
+        <div class="alert alert-danger" role="alert">{{ errorItem.message }}</div>
+    {% endfor %}
+
+
+    <div class="form-group">
+        {{ form_widget(form.current_password, { 'attr': {'class': 'form-control',
+            'placeholder': 'form.current_password'|trans } }) }}
+    </div>
+    {% for errorItem in form.current_password.vars.errors %}
+        <div class="alert alert-danger" role="alert">{{ errorItem.message }}</div>
+    {% endfor %}
+
+
+    {#{{ form_widget(form) }}#}
+    <div>
+        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" class="btn btn-primary"/>
+    </div>
+    {{ form_end(form) }}
+</div>
