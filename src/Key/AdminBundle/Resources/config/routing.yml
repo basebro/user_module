@@ -4,3 +4,6 @@ key_admin_homepage:
 key_admin_users:
     path:     /users
     defaults: { _controller: KeyAdminBundle:Default:users }
+key_admin_pdf:
+    path:     /pdf
+    defaults: { _controller: KeyAdminBundle:Default:pdf }

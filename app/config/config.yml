@@ -98,3 +98,13 @@ fos_user:
         user_manager:           fos_user.user_manager.default
     group:
         group_class: AppBundle\Entity\Group
+
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     /usr/local/bin/wkhtmltopdf #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" for Windows users
+        options:    []
+    image:
+        enabled:    true
+        binary:     /usr/local/bin/wkhtmltoimage #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\"" for Windows users
+        options:    []
