@@ -1,9 +1,13 @@
 key_admin_homepage:
-    path:     /admin
+    path:     /{_locale}/admin
     defaults: { _controller: KeyAdminBundle:Default:index }
+    requirements:
+        _locale: es|en|fr|de|ar|zh_CN
 key_admin_users:
-    path:     /users
+    path:     /{_locale}/users
     defaults: { _controller: KeyAdminBundle:Default:users }
 key_admin_pdf:
-    path:     /pdf
+    path:     /{_locale}/pdf
     defaults: { _controller: KeyAdminBundle:Default:pdf }
+    requirements:
+        _locale: es|en|fr|de
