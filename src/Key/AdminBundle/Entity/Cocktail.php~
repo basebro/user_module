@@ -100,28 +100,5 @@ class Cocktail
     {
         return $this->description;
     }
-
-    /**
-     * Set instructions
-     *
-     * @param string $instructions
-     *
-     * @return Cocktail
-     */
-    public function setInstructions($instructions)
-    {
-        $this->instructions = $instructions;
-
-        return $this;
-    }
-
-    /**
-     * Get instructions
-     *
-     * @return string
-     */
-    public function getInstructions()
-    {
-        return $this->instructions;
-    }
 }
+

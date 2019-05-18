@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cocktail</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cocktail.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ cocktail.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ cocktail.description }}</td>
+            </tr>
+            <tr>
+                <th>Instructions</th>
+                <td>{{ cocktail.instructions }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cocktail_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cocktail_edit', { 'id': cocktail.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

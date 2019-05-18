@@ -1,3 +1,11 @@
+key_admin_cocktail:
+    resource: "@KeyAdminBundle/Controller/CocktailController.php"
+    type:     annotation
+
+key_admin_cocktail:
+    resource: "@KeyAdminBundle/Controller/CocktailController.php"
+    type:     annotation
+
 key_action:
     resource: "@KeyActionBundle/Resources/config/routing.yml"
     prefix:   /
