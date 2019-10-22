@@ -47,6 +47,12 @@
         "post-install-cmd": [
             "@symfony-scripts"
         ],
+        "clean-dev": [
+            "php bin/console cache:clear --env=dev"
+        ],
+        "clean-prod": [
+            "php bin/console cache:clear --env=prod"
+        ],
         "post-update-cmd": [
             "@symfony-scripts"
         ]
